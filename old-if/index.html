@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Old Citys</title>
+  <script src="https://code.jquery.com/jquery-3.2.0.min.js" charset="utf-8"></script>
+  <script src="jquery.flexdatalist/jquery.flexdatalist.js" charset="utf-8"></script>
+
+  <link rel="stylesheet" href="jquery.flexdatalist/jquery.flexdatalist.css">
+  <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo">Старе місто Івано-Франківськ</div>
+    <div class="content">
+
+      <img src="" alt="" id="image" width="100%">
+      <div class="counter">
+        Фото: <span id="count"></span> / <span id="totalCount"></span>
+      </div>
+
+      <div id="answerContainer">
+        <input type='text' placeholder='Почніть вводити відповідь' class='flexdatalist' data-min-length='1' list='citys' id="answerInput">
+
+        <datalist id="citys"></datalist>
+        <button id="next" class="button">Відповісти</button><br>
+        <button id="goToResults" class="button go-to-results">Перейти до результатів</button>
+      </div>
+      <div id="results" class="results"></div>
+    </div>
+  </div>
+  <script src="script.js" charset="utf-8"></script>
+</body>
+
+</html>
