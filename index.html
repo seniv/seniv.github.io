@@ -1,20 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My personal web site</title>
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <style>
-        .soon{
-            font-size: 100px;
-            text-align: center;
-            text-transform: uppercase;
-            font-family: 'Pacifico', cursive;
-            color: dimgray;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<title>Ivan Seniv</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-    <p class="soon">Coming soon</p>
+  <section id="main" class="active">
+  	<div class="content">
+ 			<div class="my-name">Ivan Seniv</div>
+      <div class="about-me">
+        <div>Geek, Perfectionist, <b>Web-Developer</b></div>
+        <div>And sometimes a photographer</div>
+      </div>
+      <ul class="social">
+        <li><a href="https://facebook.com/sen1v" target="_blank">Facebook</a></li>
+        <li><a href="https://github.com/seniv" target="_blank">GitHub</a></li>
+        <li><a href="https://www.instagram.com/seniv_/" target="_blank">Instagram</a></li>
+        <li><a href="https://t.me/seniv" target="_blank">Telegram</a></li>
+      </ul>
+      <a href="#works" class="navigation">Some of my works</a>
+    </div>
+  </section>
+
+  <section id="works">
+  	<div class="content">
+   		<ol class="works">
+        <li>
+          <a href="https://seniv.github.io/vk-tg-bot/" target="_blank">Telegram bot</a>
+          <span>for people who want to leave VK.COM</span>
+        </li>
+        <li>
+          <a href="https://chrome.google.com/webstore/detail/serials-bookmark/fipkagfmgojaaghllaahnojcbfojfpmn" target="_blank">Chrome extension "Serials Bookmark"</a>
+          <span>for serials lovers</span>
+        </li>
+      </ol>
+      <a href="#main" class="navigation">Back</a>
+    </div>
+  </section>
+
+	<script>
+    let current = '#main';
+    let buttons = document.getElementsByClassName('navigation');
+    
+    for(let i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById(current.split('#').slice(1)).classList.toggle('active');
+        document.getElementById(buttons[i].attributes.href.value.split('#').slice(1)).classList.toggle('active');
+        current = buttons[i].attributes.href.value;
+      });
+    }
+	</script>
 </body>
 </html>
