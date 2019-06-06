@@ -1,98 +1,121 @@
 body {
-	overflow: hidden;
-	padding: 0;margin: 0;
-	background-color: #353943;
-	color: #fff;
-	font-family: 'Roboto', cursive;
-	text-align: center;
-	font-size: 24px;
+  overflow: hidden;
+  padding: 0;margin: 0;
+  background-color: #353943;
+  color: #fff;
+  font-family: 'Roboto', cursive;
+  text-align: center;
+  font-size: 24px;
 }
 
 section {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-ms-align-items: center;
-	align-items: center;
-	justify-content: center;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
 
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: scale(0);
-	transition: .3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transition: .3s;
 
-	min-height: 100vh;
-	min-width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 section.active {
-	transform: scale(1);
-	z-index: 322;
+  transform: scale(1);
+  z-index: 322;
 }
 
 section .content {
-	padding: 30px;
-	background-color: #fff;
-	color: #353943;
-	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: #fff;
+  color: #353943;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+section .content.grow {
+  flex-grow: 1;
+  max-width: 400px;
 }
 
 a {
-	color: #353943;
+  color: #353943;
 }
 
 a:hover {
-	color: #5F636D;
+  color: #5F636D;
 }
 
 .my-name {
-	font-size: 64px;
+  font-size: 64px;
 }
 
 .about-me {
-	margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 ul.social {
-	list-style: none;
-	margin: 20px;
-	padding: 0;
+  list-style: none;
+  margin: 20px;
+  padding: 0;
 }
 
 .social li {
-	display: inline-block;
+  display: inline-block;
 }
 
 .navigation {
-	font-weight: bold;
-	display: block;
+  font-weight: bold;
+  display: block;
+}
+
+.inline {
+  display: inline;
 }
 
 ol {
-	display: inline-block;
+  display: inline-block;
 }
 
-ol li {
-	text-align: left;
-	margin-bottom: 5px;
-	word-wrap: normal;
+li {
+  text-align: left;
+  margin-bottom: 5px;
+  word-wrap: normal;
 }
-/* 
-.works span {
-	
-} */
 
 @media screen and (max-width:768px) {
-	body {
-		font-size: 16px;
-	}
-	.my-name {
-		font-size: 32px;
-	}
-	section .content {
-		padding: 20px 0px;
-	}
+  body {
+    font-size: 16px;
+  }
+  .my-name {
+    font-size: 32px;
+  }
+
+  .about-me {
+    margin-bottom: 15px;
+  }
+
+  section .content {
+    padding: 20px 0px;
+  }
+
+  ul.social {
+    list-style: none;
+    margin: 5px 15px;
+    padding: 0;
+  }
+
+  section .content.grow {
+    flex-grow: 1;
+    max-width: 250px;
+  }
 }
